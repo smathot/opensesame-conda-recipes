@@ -1,6 +1,6 @@
 {% set name = "pyqode.python" %}
-{% set version = "3.0.0" %}
-{% set sha256 = "2837bb45de0b3b187cfb25e22e55df1dae77656a48ac5e0029f36a85fa1ebe14" %}
+{% set version = "3.0.1" %}
+{% set sha256 = "e96eaf26595a382fc714e1556db8c3b052c9dd6422f42ce85d13a5fd75a66feb" %}
 
 package:
   name: "{{ name|lower }}"
@@ -11,10 +11,12 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   noarch: python
   preserve_egg_dir: True
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv "
+  ignore_run_exports:
+    - python_abi
 
 requirements:
   host:
@@ -23,7 +25,7 @@ requirements:
     - pycodestyle
     - pip
     - pyflakes
-    - pyqode.core
+    - pyqode.core>=3.0.1
     - pyqode.qt
     - python=3.7.6=h357f687_2
     - setuptools=42.0.2
@@ -32,7 +34,7 @@ requirements:
     - jedi
     - pycodestyle
     - pyflakes
-    - pyqode.core
+    - pyqode.core>=3.0.1
     - pyqode.qt
     - python
     - setuptools
@@ -51,14 +53,10 @@ test:
     - pyqt
 
 about:
-  home: https://github.com/pyQode/pyqode.python
+  home: https://github.com/smathot/pyqode.python
   license: MIT
   license_family: MIT
   license_file: LICENSE
   summary: Adds python support to pyqode.core
-  doc_url: https://github.com/pyQode/pyQode/wiki
-  dev_url: https://github.com/pyQode/pyQode
-
-extra:
-  recipe-maintainers:
-    - ericpre
+  doc_url: https://github.com/smathot/pyQode/wiki
+  dev_url: https://github.com/smathot/pyQode
