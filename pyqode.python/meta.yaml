@@ -1,6 +1,6 @@
 {% set name = "pyqode.python" %}
-{% set version = "3.0.1" %}
-{% set sha256 = "e96eaf26595a382fc714e1556db8c3b052c9dd6422f42ce85d13a5fd75a66feb" %}
+{% set version = "3.0.2" %}
+{% set sha256 = "60028786c050cc0498ec4b41f907ebb22208af8420d52e61cdcfdcf5a9058683" %}
 
 package:
   name: "{{ name|lower }}"
@@ -25,7 +25,7 @@ requirements:
     - pycodestyle
     - pip
     - pyflakes
-    - pyqode.core>=3.0.1
+    - pyqode.core>=3.0.2
     - pyqode.qt
     - python=3.7.6=h357f687_2
     - setuptools=42.0.2
@@ -34,7 +34,7 @@ requirements:
     - jedi
     - pycodestyle
     - pyflakes
-    - pyqode.core>=3.0.1
+    - pyqode.core>=3.0.2
     - pyqode.qt
     - python
     - setuptools
