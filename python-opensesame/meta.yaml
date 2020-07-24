@@ -1,7 +1,7 @@
 {% set name = "python-opensesame" %}
-{% set version = "3.3.4a1" %}
-{% set sha256 = "5280c1be80ee217916f3656b809c2e81233820a9a1320ee76571e37d25b0cfa5" %}
-{% set url = "https://files.pythonhosted.org/packages/59/5e/4af6704d368222387786db66b6f7626403c086e2611241fb3dccb2a3e72e/python-opensesame-3.3.4a1.tar.gz" %}
+{% set version = "3.3.4a2" %}
+{% set sha256 = "3e19ab8d5f5abf87dae01cca6c07fdd359175fc8eb2e0fef265bf200ea6da6d6" %}
+{% set url = "https://files.pythonhosted.org/packages/30/2e/e67678225f338e0a9ec49529c2f24a510355f23ba7c6e3cbe4153042c551/python-opensesame-3.3.4a2.tar.gz" %}
 
 package:
   name: {{ name }}
