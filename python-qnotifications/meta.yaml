@@ -1,5 +1,5 @@
 {% set name = "python-qnotifications" %}
-{% set version = "2.0.3" %}
+{% set version = "2.0.6" %}
 
 package:
   name: {{ name }}
@@ -12,7 +12,11 @@ source:
 build:
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-  number: 2
+  number: 0
+  ignore_run_exports:
+    - python_abi
+    - qtpy
+    - pyqt
 
 requirements:
   build:
