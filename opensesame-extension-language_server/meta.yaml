@@ -1,0 +1,38 @@
+{% set name = "opensesame-extension-language_server" %}
+{% set version = "0.1.7" %}
+{% set sha256 = "01e02d0560160026addbcdc9ce362d4c28dd16aad4561e2c397233538524892f" %}
+{% set url = "https://files.pythonhosted.org/packages/e3/16/d6f64200bd5a091953b1400637ada8b711998ade588e640cefe3f99526e9/opensesame-extension-language_server-0.1.7.tar.gz" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: {{ url }}
+  sha256: {{ sha256 }}
+
+build:
+  noarch: python
+  number: 2
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  ignore_run_exports:
+    - python_abi
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - pyyaml
+    - pyqode.language_server
+
+  run:
+    - python
+    - python-opensesame
+    - pyyaml
+    - pyqode.language_server
+
+about:
+  home: https://github.com/open-cogsci/opensesame-extension-language_server
+  license: GPLv3
+  summary: 'Language-server extension for OpenSesame and Rapunzel'

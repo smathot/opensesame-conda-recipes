@@ -1,0 +1,30 @@
+{% set name = "pylspclient" %}
+{% set version = "0.0.3a1" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  git_rev: release/{{ version }}
+  git_url: https://github.com/smathot/{{ name }}.git
+
+build:
+  noarch: python
+  number: 1
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  ignore_run_exports:
+    - python_abi
+
+requirements:
+  build:
+    - python
+
+  run:
+    - python
+
+
+about:
+  home: https://github.com/yeger00/{{ name }}
+  license: Apache Software License
+  summary: 'Language server protocol (LSP) client implementation in Python'

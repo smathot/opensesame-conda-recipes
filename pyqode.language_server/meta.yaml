@@ -1,0 +1,48 @@
+{% set name = "pyqode.language_server" %}
+{% set version = "0.1.6" %}
+{% set sha256 = "d61e6aed7d4aef88960fedf5ce7c65bacc9adccd3b7eaf4403e63399996a0f03" %}
+{% set url = "https://files.pythonhosted.org/packages/c6/98/cf47e83cba000f259c49c823278a8158c5cea1fa1785b6eff95f48b7d1e7/pyqode.language_server-0.1.6.tar.gz" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: {{ url }}
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+  noarch: python
+  preserve_egg_dir: True
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv "
+  ignore_run_exports:
+    - python_abi
+
+requirements:
+  host:
+    - pylspclient
+    - pyqode.core >=3.1
+    - python=3.7.6=h357f687_2
+    - setuptools=42.0.2
+  run:
+    - pylspclient
+    - pyqode.core >=3.1
+
+test:
+  imports:
+    - pyqode
+    - pyqode.language_server
+    - pyqode.language_server.modes
+    - pyqode.language_server.backend
+  requires:
+    - pyqt
+
+about:
+  home: https://github.com/smathot/pyqode.language_server
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: Adds python support to pyqode.core
+  doc_url: https://github.com/smathot/pyqode.language_server/readme.md
+  dev_url: https://github.com/smathot/pyqode.language_server

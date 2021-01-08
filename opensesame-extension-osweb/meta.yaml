@@ -1,7 +1,7 @@
 {% set name = "opensesame-extension-osweb" %}
-{% set version = "1.3.9.0" %}
-{% set sha256 = "ce4ae04d7348445409181e4fef5c74b0d8dd05cd68295a51f3f1f1d0e437b08c" %}
-{% set url = "https://files.pythonhosted.org/packages/22/2e/51cb56959857fa37fa86504a9d0cc192cda8c705afc4f9b64e73a426bc2b/opensesame-extension-osweb-1.3.9.0.tar.gz" %}
+{% set version = "1.3.11.0" %}
+{% set sha256 = "a01df287dfebc50549e1e7e261fe7cefb0a3020f70e8b8e630596ed70905774a" %}
+{% set url = "https://files.pythonhosted.org/packages/3e/6c/bdfa6b24014fa6602bb32a9017b7d02bbeb4bc6cf689935fa3427edbcb17/opensesame-extension-osweb-1.3.11.0.tar.gz" %}
 
 package:
   name: {{ name|lower }}

@@ -1,7 +1,7 @@
 {% set name = "rapunzel" %}
-{% set version = "0.4.11" %}
-{% set sha256 = "b6c67f688d3d808115e74f1d8c5b65913b886013cf95eeb27563117d376ee59c" %}
-{% set url = "https://files.pythonhosted.org/packages/16/e6/b04d898703b8b1dbfc3ab2ac6c1d42539d1377c2dc6b082837a312c4bfb0/rapunzel-0.4.11.tar.gz" %}
+{% set version = "0.5.0" %}
+{% set sha256 = "6610d3096600934ddbe93d3024eff89a7e69d0c7049ba329a15897296b400d57" %}
+{% set url = "https://files.pythonhosted.org/packages/aa/34/fbcb3bf207a926c5083fdb77864b8e12ed967428404c7e5bf0fc667ac8fe/rapunzel-0.5.0.tar.gz" %}
 
 package:
   name: {{ name }}
@@ -15,11 +15,11 @@ source:
 build:
   noarch: python
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
-  number: 0
+  number: 1
   entry_points:
     - rapunzel = rapunzel:rapunzel
   ignore_run_exports:
-    - python_abi    
+    - python_abi
 
 requirements:
   build:
@@ -28,11 +28,13 @@ requirements:
 
   run:
     - python
-    - python-opensesame >=3.3.4a9
+    - python-opensesame >=3.3.7a3
     - python-levenshtein
     - qtconsole
     - nbformat
+    - psutil
     - pyspellchecker
+    - esprima-python
 
 about:
   home: https://github.com/smathot/rapunzel

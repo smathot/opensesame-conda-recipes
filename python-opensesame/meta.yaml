@@ -1,7 +1,7 @@
 {% set name = "python-opensesame" %}
-{% set version = "3.3.4" %}
-{% set sha256 = "2b906cc0b47e4722f2e0901e3687d70ab7550c9a8f87c1f0c4ab21ee108dc1df" %}
-{% set url = "https://files.pythonhosted.org/packages/4e/ea/0ef83b67eda3d5133314a941761cdaffa91ef5f8a78326d82a3f3cc56124/python-opensesame-3.3.4.tar.gz" %}
+{% set version = "3.3.7a4" %}
+{% set sha256 = "09c80296a57421fea57e3895e55a26f972f89de02a3e360f6b53e42ec16949b0" %}
+{% set url = "https://files.pythonhosted.org/packages/67/e7/0c427be49ca5a81a4e3a0f8e7e43a5816a6203de5a970fbfe86213816ea4/python-opensesame-3.3.7a4.tar.gz" %}
 
 package:
   name: {{ name }}
@@ -41,8 +41,8 @@ requirements:
     - pyflakes
     - shapely
     - pillow
-    - pyqode.core >=3
-    - pyqode.python >=3
+    - pyqode.core >=3.1
+    - pyqode.python >=3.1
 
 about:
   home: https://github.com/smathot/OpenSesame

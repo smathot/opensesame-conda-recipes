@@ -1,0 +1,33 @@
+{% set name = "opensesame-extension-omm" %}
+{% set version = "0.2.1" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  git_rev: release/{{ version }}
+  git_url: https://github.com/open-cogsci/omm-client.git
+
+build:
+  noarch: python
+  number: 1
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  ignore_run_exports:
+    - python_abi
+
+requirements:
+  build:
+    - python-opensesame
+    - python
+
+    - python-opensesame
+  run:
+    - python
+
+
+about:
+  home: https://github.com/open-cogsci/omm-client
+  license: GNU General Public Licence v3
+  summary: |
+    OpenMonkeyMind (OMM) allows OpenSesame experiments to be managed on a central OMM server and deployed to computers running OpenSesame with the OMM client software installed. This package contains the client software.

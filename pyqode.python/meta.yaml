@@ -1,13 +1,14 @@
 {% set name = "pyqode.python" %}
-{% set version = "3.0.2" %}
-{% set sha256 = "60028786c050cc0498ec4b41f907ebb22208af8420d52e61cdcfdcf5a9058683" %}
+{% set version = "3.1.4" %}
+{% set sha256 = "3a5cb3d94c8cdbc165e73b6fc49a2227dbcb0311fbffc9f4b20cb9f520c8f623" %}
+{% set url = "https://files.pythonhosted.org/packages/b3/54/d844e9666b12447febaf41e4c307b136e8ea494899d597ccc314815cf6d8/pyqode3.python-3.1.4.tar.gz" %}
 
 package:
   name: "{{ name|lower }}"
   version: "{{ version }}"
 
 source:
-  url: https://files.cogsci.nl/{{ name }}-{{ version }}.tar.gz
+  url: {{ url }}
   sha256: {{ sha256 }}
 
 build:
@@ -38,6 +39,7 @@ requirements:
     - pyqode.qt
     - python
     - setuptools
+    - autopep8
 
 test:
   imports:
