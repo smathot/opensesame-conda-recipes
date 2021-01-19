@@ -1,5 +1,5 @@
 {% set name = "pylspclient" %}
-{% set version = "0.0.3a1" %}
+{% set version = "0.0.3a3" %}
 
 package:
   name: {{ name|lower }}

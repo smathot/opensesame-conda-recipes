@@ -1,7 +1,7 @@
 {% set name = "pyqode.language_server" %}
-{% set version = "0.1.6" %}
-{% set sha256 = "d61e6aed7d4aef88960fedf5ce7c65bacc9adccd3b7eaf4403e63399996a0f03" %}
-{% set url = "https://files.pythonhosted.org/packages/c6/98/cf47e83cba000f259c49c823278a8158c5cea1fa1785b6eff95f48b7d1e7/pyqode.language_server-0.1.6.tar.gz" %}
+{% set version = "0.1.8" %}
+{% set sha256 = "6580437242ce045ced6cf0e4d16e644d032314a4db783d8c99d7305c32710c17" %}
+{% set url = "https://files.pythonhosted.org/packages/fc/e0/bd612f0807203ca126e1856347578d9950f461581efe55991ead81b15537/pyqode.language_server-0.1.8.tar.gz" %}
 
 package:
   name: "{{ name|lower }}"

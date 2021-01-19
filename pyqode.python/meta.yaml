@@ -1,7 +1,7 @@
 {% set name = "pyqode.python" %}
-{% set version = "3.1.4" %}
-{% set sha256 = "3a5cb3d94c8cdbc165e73b6fc49a2227dbcb0311fbffc9f4b20cb9f520c8f623" %}
-{% set url = "https://files.pythonhosted.org/packages/b3/54/d844e9666b12447febaf41e4c307b136e8ea494899d597ccc314815cf6d8/pyqode3.python-3.1.4.tar.gz" %}
+{% set version = "3.1.5" %}
+{% set sha256 = "832fe9f8470eee28687299767f4072b1672bc9aaf4642a432e29a027c5cc57ef" %}
+{% set url = "https://files.pythonhosted.org/packages/6b/44/b61b252bd658afcebcf4dd147cde3dc9ef65c3dc7147768869b2e60cf224/pyqode3.python-3.1.5.tar.gz" %}
 
 package:
   name: "{{ name|lower }}"
